@@ -1,138 +1,533 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Logan Manthey's Portfolio Website</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.17.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.17.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.17.1/firebase-performance-compat.js"></script>
-    <!-- 
+<!-- 
+https://krystonschwarze.com/?ref=onepagelove -->
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Logan Manthey's Portfolio Website</title>
+  <!-- 
+    https://level-out.com/
+  https://stackoverflow.com/questions/60594178/firebase-cannot-be-loading-because-running-scripts-is-disabled-on-this-system -->
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/9.17.1/firebase-app-compat.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/9.17.1/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/9.17.1/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/9.17.1/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/9.17.1/firebase-functions-compat.js"></script>
+  <script defer src="/__/firebase/9.17.1/firebase-messaging-compat.js"></script>
+  <script defer src="/__/firebase/9.17.1/firebase-storage-compat.js"></script>
+  <script defer src="/__/firebase/9.17.1/firebase-analytics-compat.js"></script>
+  <script defer src="/__/firebase/9.17.1/firebase-remote-config-compat.js"></script>
+  <script defer src="/__/firebase/9.17.1/firebase-performance-compat.js"></script>
+  <!-- 
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-    <!-- linking css file -->
-    <link rel="stylesheet" href="style.css">
-    <!-- bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link rel="icon" href="images/browsericon_initials.png">
-  </head>
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  <!-- linking css file -->
+  <link rel="stylesheet" href="style.css">
+  <!-- bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="icon" href="images/browsericon_initials.png">
+</head>
 
-  <header>
-    <svg
-    class="logo"
-    xmlns="images/initials.svg"
-    xmlns:xlink="images/initials.svg"
-    viewBox="0 0 60 60"
-    version="1.1"
-    x="0px"
-    y="0px"
-  >
-    <g
-      stroke="none"
-      stroke-width="1"
-      fill="none"
-      fill-rule="evenodd"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <g
-        transform="translate(1.000000, 1.000000)"
-        stroke="#c0d0ee"
-        stroke-width="2"
-      >
-        <circle cx="29" cy="29" r="29" />
-        <circle
-          transform="translate(28.999997, 29.000000) rotate(-45.000000) translate(-28.999997, -29.000000) "
-          cx="28.9999969"
-          cy="29"
-          r="16"
-        />
-        <path
-          d="M43,36 L36,20.25 C35.8347921,19.878628 35.4610599,19.6443674 35.0548122,19.657543 C34.6485645,19.6707186 34.290797,19.9287035 34.15,20.31 L28.83,33.35 C28.6902065,33.7281582 28.3362794,33.9847867 27.9334011,34.0001136 C27.5305227,34.0154405 27.1581208,33.7864441 26.99,33.42 L22.84,25.82 C22.6809801,25.4763319 22.3419369,25.2515444 21.963474,25.2388585 C21.5850112,25.2261726 21.2316763,25.4277519 21.05,25.76 L15.07,36.87"
-        />
-      </g>
-    </g>
-  </svg>
+<body>
+  <main>
+    <header>
+      <!-- <svg class="logo" xmlns="images/initials.svg" xmlns:xlink="images/initials.svg" viewBox="0 0 60 60" version="1.1"
+        x="0px" y="0px">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
+          stroke-linejoin="round">
+          <g transform="translate(1.000000, 1.000000)" stroke="#c0d0ee" stroke-width="2">
+            <circle cx="29" cy="29" r="29" />
+            <circle transform="translate(28.999997, 29.000000) rotate(-45.000000) translate(-28.999997, -29.000000) "
+              cx="28.9999969" cy="29" r="16" />
+            <path
+              d="M43,36 L36,20.25 C35.8347921,19.878628 35.4610599,19.6443674 35.0548122,19.657543 C34.6485645,19.6707186 34.290797,19.9287035 34.15,20.31 L28.83,33.35 C28.6902065,33.7281582 28.3362794,33.9847867 27.9334011,34.0001136 C27.5305227,34.0154405 27.1581208,33.7864441 26.99,33.42 L22.84,25.82 C22.6809801,25.4763319 22.3419369,25.2515444 21.963474,25.2388585 C21.5850112,25.2261726 21.2316763,25.4277519 21.05,25.76 L15.07,36.87" />
+          </g>
+        </g>
+      </svg> -->
 
-  <nav>
-    <a href="https://github.com/manthelt">Github</a>
+      <!-- <svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75" height="75" viewBox="0, 0, 400,400"><g id="svgg"><path id="path0" d="M193.103 206.897 L 193.103 320.000 197.241 320.000 L 201.379 320.000 201.379 206.897 L 201.379 93.793 197.241 93.793 L 193.103 93.793 193.103 206.897 M231.181 149.907 C 230.731 152.803,227.878 178.759,224.840 207.586 C 221.802 236.414,218.977 262.017,218.561 264.483 L 217.806 268.966 226.656 268.966 L 235.507 268.966 236.319 262.414 C 236.766 258.810,238.470 242.517,240.107 226.207 C 241.743 209.897,243.475 196.153,243.955 195.666 C 244.435 195.178,252.586 207.098,262.069 222.153 C 271.552 237.209,279.731 249.556,280.246 249.591 C 280.760 249.626,289.080 237.234,298.734 222.052 C 308.388 206.870,316.537 194.698,316.842 195.003 C 317.148 195.309,318.932 210.678,320.809 229.158 C 325.307 273.466,323.744 268.966,334.630 268.966 L 343.691 268.966 342.915 263.793 C 342.488 260.948,339.586 234.103,336.465 204.138 C 333.345 174.172,330.381 148.560,329.879 147.222 C 329.204 145.425,322.841 154.328,305.517 181.308 C 292.621 201.394,281.448 217.649,280.690 217.430 C 279.931 217.212,269.019 201.099,256.440 181.623 C 243.862 162.148,233.216 145.860,232.784 145.428 C 232.352 144.995,231.630 147.011,231.181 149.907 M64.828 208.276 L 64.828 268.966 101.379 268.966 L 137.931 268.966 137.931 260.690 L 137.931 252.414 111.034 252.414 L 84.138 252.414 84.138 200.000 L 84.138 147.586 74.483 147.586 L 64.828 147.586 64.828 208.276 " stroke="none" fill="#000000" fill-rule="evenodd"></path></g></svg> -->
 
-    <a href="https://matcha.level-out.com/">Linkedin</a>
+      <nav>
+        <a href="#projects">Projects</a>
 
-    <a href="https://github.com/lukehedger/vitae/blob/master/cv.pdf"
-      >Resume</a
-    >
-  </nav>
-  </header>
+        <a href="https://github.com/manthelt">Github</a>
 
-  <h1>Logan Manthey</h1>
+        <a href="https://www.linkedin.com/in/logan-manthey">Linkedin</a>
 
-  <section id="about">
-    <div class="about-text">
-      <p>
-        Hi, I'm Logan. I'm a Computer Engineering Student at Rose-Hulman Institute of Technology
-      </p>
+        <a href="https://app.joinhandshake.com/stu/users/26445221">Handshake</a>
 
-      <p>
-      Throughout my internships and college academics, I have tailored my knowledge throughout
-      computer engineering, electrical engineering, software engineering, and computer science.
-      By doing such, I am able to apply this knowledge to create and design projects that
-      integrate systems security and embedded systems. My passion is to utilize embedded
-      systems and firmware to develop and optimize products that embrace advanced cybersecurity
-      practices. Through this, I plan to use hardware orientated Cyber Security and Product
-      development to make the world a safer and better place.
-      </p>
+        <a href="Resumes/Logan_Manthey_Resume_Winter_2022.pdf">Resume</a>
 
-    <a class="btn btn-dark" role="button" href="Logan_Manthey_Resume_Winter_2022.pdf"
-    download="Logan_Manthey_Resume.pdf">
-    Resume Download
-    </a>
-    
-    </div>
+      </nav>
+    </header>
 
-    <div class="about-face">
-      <img
-        src="images/croppedProfile.png"
-        alt="Logan Manthey Profile Picture"
-      />
-    </div>
+    <h1>Logan Manthey</h1>
 
-  
-  </section>
+    <section id="about">
+      <div class="about-text">
+        <p>
+          Hi, I'm Logan. I'm a Computer Engineering Student at Rose-Hulman Institute of Technology. Experience in
+          hardware development in Altium and KiCAD
+        </p>
+
+        <p>
+          Throughout my internships and college academics, I have tailored my knowledge throughout
+          computer engineering, electrical engineering, software engineering, and computer science.
+          By doing such, I am able to apply this knowledge to create and design projects that
+          integrate systems security and embedded systems. My passion is to utilize embedded
+          systems and firmware to develop and optimize products that embrace advanced cybersecurity
+          practices. Through this, I plan to use hardware orientated Cyber Security and Product
+          development to make the world a safer and better place.
+
+
+        </p>
 
 
 
+        <a class="btn btn-dark" role="button" href="Resumes/Logan_Manthey_Resume_Winter_2022.pdf"
+          download="Logan_Manthey_Resume.pdf">
+          Resume Download
+        </a>
+
+      </div>
+
+      <div class="about-face">
+        <img src="images/croppedNewProfile.png" alt="Logan Manthey Profile Picture" />
+      </div>
+
+
+    </section>
+
+    <section id="Experience" class="resume">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+
+            <h3 class="resume-title">Education</h3>
+            <hr>
+
+            <div class="resume-item">
+              <h4>Masters Engineering Management</h4>
+              <h5>2020 - 2025</h5>
+              <p><em>Rose-Hulman Institute of Technology, Terre Haute, IN</em></p>
+              <ul>
+                Manufacturing Systems, Marketing in New Product Development
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Bachelors of Science Computer Engineering</h4>
+              <h5><em>Minor in German and Cyber Security</em></h5>
+              <h5>2020 - 2025</h5>
+              <p><em>Rose-Hulman Institute of Technology, Terre Haute, IN</em></p>
+              <!-- <p>Minor in German and Cyber Security</p> -->
+              <ul>
+                Advanced Microcomputers (Hardware-Software Codesign),
+                Advanced Verilog,
+                Embedded Systems,
+                High-Speed Digital Design,
+                Communication Networks,
+                Computer Architecture I-II,
+                Operating Systems,
+                Digital Signal Processing,
+                Continuous-Time Signals \& Systems,
+                Electronic Device Modeling,
+                Practical Security I-III,
+                Cyber Security Seminar,
+                German I-VI,
+                DC and AC Circuits, Circuits and Systems,
+                Object-Oriented Software Development,
+                Data Structures and Algorithm Analysis,
+                Engineering at Nanoscale
+              </ul>
+
+
+            </div>
 
 
 
 
-  <footer id="footer">
-    <div class="container-fluid">
-        <!-- social media icons -->
-        <div class="social-icons mt-4">
-            <a href="https://www.github.com/manthelt" target="https://www.github.com/manthelt"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/logan-manthey/"><i class="fab fa-linkedin"></i></a>
+          </div>
+
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Professional Experience</h3>
+            <hr>
+            <div class="resume-item">
+              <h4>Lead Hardware Engineer Intern</h4>
+              <h5>June 2023 - Present</h5>
+              <p><em>Glassboard Product Development, Indianapolis, IN </em></p>
+              <ul>
+                Wrote documentation on standards for Altium Designer practices and created PCB and Schematic templates.
+                Integrated A365 managed content such as device sheets and design reuse blocks into the company workflow.
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Hardware Engineer Intern</h4>
+              <h5>June 2022 - Present</h5>
+              <p><em>Glassboard Product Development, Indianapolis, IN </em></p>
+              <ul>
+                Worked on a team to develop new products from customer specifications; Designed Altium Schematics
+                and layouts, prototyped and tested PCB assemblies, surface mount soldering, firmware development, wrote
+                technical documentation, implemented and ran electronic component database for on-hand parts
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Electrical Engineering Intern</h4>
+              <h5>June 2021 - August 2021</h5>
+              <p><em>Curt G Joa, Sheboygan Falls, WI</em></p>
+              <ul>
+                Communicated across various teams including electricians, mechanical engineers, and mechanics to develop
+                industrial automation machinery in the disposable hygiene space; worked with Allen Bradley PLC, Studio
+                5000 Logix, Logix Emulate, RSlinx, Factory Talk, Codesys, Cognex Machine Vision Insight explorer, and
+                VMware ESXI for remote HMI systems; troubleshooted electrical panels, setup and tested new devices, and
+                coordinated with project management and customers
+                <!-- <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and
+                  advertisements).</li>
+                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+                <li>Created 4+ design presentations and proposals a month for clients and account managers</li> -->
+              </ul>
+            </div>
+          </div>
         </div>
-    </div>
-  </footer>
-  <body>
-      <!-- load javascript after loading all html content -->
-      <script src="script/script.js"></script>
-  </body>
+      </div>
+    </section>
+
+    <section id="Skils" class="resume">
+      <div class="container">
+
+        <h2>Skills</h2>
+
+        <div class="row">
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+
+            <h3 class="resume-title">Hardware</h3>
+            <hr>
+            <dl>
+              <dt>PCB Design</dt>
+              <dd>- Experienced in Altium Designer 365 and KiCAD. Experince creating managed content such as device
+                sheets, design reuse blocks, sheet templates, and project templates.</dd>
+              <dt>FPGA</dt>
+              <dd>- Experienced in Quartus Prime, Model Sim, Xilinux Vivado with Zybo Z7 development boards.</dd>
+              <dt>Soldering and PCB Rework</dt>
+              <dd>- Solder and rework various packaged from 0402s to BGAs. </dd>
+
+            </dl>
+
+
+          </div>
+
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Software</h3>
+            <hr>
+            <dl>
+              <dt>Linux</dt>
+              <dd>- Daily drive Ubuntu on personal machines, ran and managed various linux servers and Hyper-Visors
+                (VMWare ESXI). Use window manager and VIM.</dd>
+              <dt>Security</dt>
+              <dd>- Ghidra Reversing, Kali Linux Tools </dd>
+              <dt>Firmware</dt>
+              <dd>- MSP432, TI Code Composer, Zephr RTOS, Arduino, </dd>
+
+            </dl>
+
+          </div>
+
+
+    </section>
+
+
+    <section id="projects">
+      <h2>Projects and Research</h2>
+
+
+      <div class="project">
+        <div class="row">
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+
+            <div class="resume-item">
+              <h4>Bitstream Evolution Data Acquisition Board</h4>
+              <h5>September 2022 - Present</h5>
+              <p><em>Rose-Hulman Institute of Technology </em></p>
+              This development board is an extension of the evolvable hardware open source project
+              (<a href="https://evolvablehardware.org/">https://evolvablehardware.org/</a>). It was created to expand
+              and bring new features to
+              the evolvable hardware ecosystem while still maintaining it’s accessibility.
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/BitstreamBoard.png" alt="Wafer" height="300px" />
+
+
+          </div>
+
+          <div class="link">
+            <a href="https://github.com/manthelt">Github Link</a>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="project">
+        <div class="row">
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+
+            <div class="resume-item">
+              <h4>RSA Hardware Accelerator</h4>
+              <h5>May 2023</h5>
+              <p><em>Rose-Hulman Institute of Technology </em></p>
+              Used hardware-software co-design on Xilinx Vivado to speed up RSA encryption and decryption
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/BlockDiagram.png" alt="Wafer" height="300px" />
+
+
+          </div>
+
+          <div class="link">
+            <a href="Reports/Logan_Manthey_CSSE232_Final_Project.pdf">Report Link</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="row">
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+
+            <div class="resume-item">
+              <h4>Embedded System Projects</h4>
+              <h5>December 2022 - March 2023</h5>
+              <p><em>Rose-Hulman Institute of Technology</em></p>
+              <dl>
+                <dt>Camera Controlled Car</dt>
+                <dd>- Programmed an MSP432 to control a car with movement recognized by a camera</dd>
+                <dt>Sensor Terminal</dt>
+                <dd>- Relayed values from an I2C gyroscope to a parallel LCD screen with settings
+                  adjustment from a UART terminal </dd>
+                <dt>Piezo Buzzer Music Driver</dt>
+                <dd>- Used timers and interrupts to generate a PWM signal for a piezo buzzer;
+                  playback was controlled using hardware interrupts on buttons</dd>
+                <dt>Stepper Motor Driver</dt>
+                <dd>- Built a Stepper motor driver that also generated a PWM signal using timers
+                  to control a servo motor speed gauge </dd>
+              </dl>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/MSP432.png" alt="Wafer" height="300px" />
+
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="project">
+        <div class="row">
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+
+            <div class="resume-item">
+              <h4>RISC-V ROP Gadget Finder</h4>
+              <h5>February 2023</h5>
+              <p><em>Rose-Hulman Institute of Technology </em></p>
+              Worked in a team to create python scripts to find gadgets from RISC-V binaries to exploit return
+              orientated programming.
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/RISCVGadetFinder.png" alt="Wafer" height="300px" />
+
+
+          </div>
+
+          <div class="link">
+            <a href="https://github.com/manthelt">Github Link</a>
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <div class="project">
+        <div class="row">
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+
+            <div class="resume-item">
+              <h4>Reduced Instruction Set Processor</h4>
+              <h5>September 2022 - November 2022</h5>
+              <p><em>Rose-Hulman Institute of Technology </em></p>
+              Utilized Model-Sim and Quartus Prime to design and implement both a custom multi-accumulator and
+              load store reduced instruction set processor in Verilog with supporting documentation in LaTeX
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/datapath.png" alt="Wafer" height="300px" />
+
+
+          </div>
+
+          <div class="link">
+            <a href="Reports/Logan_Manthey_CSSE232_Final_Project.pdf">Report Link</a>
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <div class="project">
+        <div class="row">
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+
+            <div class="resume-item">
+              <h4>Solar Cell Creation</h4>
+              <h5>March 2022 - May 2022</h5>
+              <p><em>Rose-Hulman Instutie of Technology </em></p>
+              An examination of solar cell production through techniques such as such as RCA clean, Doping,
+              Photo-lithography and Sputtering. with a comparison to higher efficiency cells. This
+              process produced solar cells with a maximum of power output of 160 µW per cell under ideal lighting
+              conditions and a 1 kΩ
+              load.
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/SolarCell.jpeg" alt="Wafer" height="300px" />
+
+
+          </div>
+
+          <div class="link">
+            <a href="Reports/Logan_Manthey_Solar_Cell.pdf">Report Link</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="row">
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+
+            <div class="resume-item">
+              <h4>Manufacturing Process Optimization</h4>
+              <h5>March 2023 - May 2023</h5>
+              <p><em>Rose-Hulman Institute of Technology </em></p>
+              An examination of a manufacturing process related to assembling tablets with a computer simulation created
+              in
+              ProModel, a discrete event simulator.
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/EMGTProjectDiagram.png" alt="Wafer" height="300px" />
+
+
+          </div>
+
+          <div class="link">
+            <a href="Reports/Logan_Manthey_EMGT598_Final_Project.pdf">Report Link</a>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+      <div class="project">
+        <div class="row">
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+
+            <div class="resume-item">
+              <h4>Personal Networking and Home Automation</h4>
+              <h5>September 2018 - Present</h5>
+              <p><em>Personal Projects</em></p>
+              Managed a network rack with Network Attached Storage Servers, Hyper-Visor servers, managed switches,
+              and routers; ran Home Assistant virtual machine that uses Zigbee, and ESP32 modules
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/networkRack.jpg" alt="Wafer" height="300px" />
+
+
+          </div>
+
+        </div>
+      </div>
+
+
+    </section>
+  </main>
+</body>
+
+
+<footer class="text-center text-white" style="background-color: #ffffff;">
+  <!-- Grid container -->
+  <div class="container pt-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+
+      <!-- Linkedin -->
+      <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.linkedin.com/in/logan-manthey"
+        role="button" data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+      <!-- Github -->
+      <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/manthelt" role="button"
+        data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright: Logan Manthey
+  </div>
+  <!-- Copyright -->
+</footer>
+
+<body>
+  <!-- load javascript after loading all html content -->
+  <script src="script/script.js"></script>
+</body>
+
 </html>
