@@ -56,6 +56,11 @@
   h1 {
     color: var(--color-accent);
     font-family: var(--typography-secondary);
+    
+  }
+
+  h2 {
+    margin-bottom: 32px;
   }
 
   header {
@@ -119,6 +124,7 @@
 
   section#work {
     max-width: 600px;
+    margin-bottom: 64px;
   }
 
   svg.level-out {
@@ -131,5 +137,21 @@
     width: 60px;
   }
 
- 
+ section#Skils{
+  margin-bottom: 64px;
+ }
 
+ section#Experience{
+  margin-bottom: 64px;
+ }
+
+/* Solid border */
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
+/* Rounded border */
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}
